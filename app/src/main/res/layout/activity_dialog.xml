@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/dialog1"
+        style="@style/text_style"
+        android:text="NormalDialog" />
+
+    <TextView
+        android:id="@+id/dialog2"
+        style="@style/text_style"
+        android:text="MultiItemDialog" />
+
+    <TextView
+        android:id="@+id/dialog2_1"
+        style="@style/text_style"
+        android:text="MultiItemDialog2" />
+
+    <TextView
+        android:id="@+id/dialog3"
+        style="@style/text_style"
+        android:text="TipMessageDialog1" />
+
+    <TextView
+        android:id="@+id/dialog4"
+        style="@style/text_style"
+        android:text="TipMessageDialog2" />
+
+    <TextView
+        android:id="@+id/dialog4_1"
+        style="@style/text_style"
+        android:text="TipMessageDialog3" />
+
+    <TextView
+        android:id="@+id/dialog5"
+        style="@style/text_style"
+        android:text="LoadingDialog" />
+
+    <TextView
+        android:id="@+id/dialog6"
+        style="@style/text_style"
+        android:text="LoadingDialog2" />
+
+    <TextView
+        android:id="@+id/dialog7"
+        style="@style/text_style"
+        android:text="LoadingDialog3" />
+
+    <TextView
+        android:id="@+id/dialog8"
+        style="@style/text_style"
+        android:text="BottomDialog" />
+
+
+</LinearLayout>

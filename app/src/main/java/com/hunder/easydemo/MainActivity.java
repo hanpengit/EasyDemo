@@ -1,46 +1,35 @@
 package com.hunder.easydemo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.hunder.easylib.dialog.CustomMultiItemDialog;
+import com.hunder.easydemo.base.BaseActivity;
+import com.hunder.easydemo.dialog.DialogActivity;
 import com.hunder.easylib.utils.ToastUtils;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-    private CustomMultiItemDialog customMultiItemDialog;
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
 
-        customMultiItemDialog = new CustomMultiItemDialog(this);
-        customMultiItemDialog.setOnClickListener(new CustomMultiItemDialog.OnClickListener() {
-            @Override
-            public void appOpen() {
-                ToastUtils.showMessage("appOpen");
-            }
-
-            @Override
-            public void localOpen() {
-                ToastUtils.showMessage("localOpen");
-            }
-        });
     }
 
-    @OnClick({R.id.tv, R.id.tv_jump})
+    @OnClick({R.id.tv, R.id.dialog})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv:
+                ToastUtils.showMessage("Easy Demo");
                 break;
-            case R.id.tv_jump:
-                customMultiItemDialog.show();
+            case R.id.dialog:
+                DialogActivity.startActivity(this);
                 break;
         }
     }

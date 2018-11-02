@@ -4,9 +4,6 @@ import android.util.Log;
 
 /**
  * 日志的封装
- *
- * @author Kevin
- *
  */
 public class LogUtils {
 

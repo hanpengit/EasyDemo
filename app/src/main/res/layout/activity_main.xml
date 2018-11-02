@@ -2,26 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
-        android:layout_margin="20dp"
-        android:background="#999"
-        android:gravity="center"
-        android:text="Hello World!"
-        android:textSize="12sp" />
+        style="@style/text_style"
+        android:text="Easy Demo" />
 
     <TextView
-        android:id="@+id/tv_jump"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
-        android:layout_margin="20dp"
-        android:background="#999"
-        android:gravity="center"
-        android:text="跳转"
-        android:textSize="12sp" />
+        android:id="@+id/dialog"
+        style="@style/text_style"
+        android:text="Dialog" />
 
 </LinearLayout>

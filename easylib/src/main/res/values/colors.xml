@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="easy_color_primary">#2a85e8</color>
     <color name="white">#ffffff</color>
     <color name="lineColor2">#eeeeee</color> <!-- 分割线颜色 -->
+    <color name="color_pressed">#cce8e8e8</color>
 </resources>
