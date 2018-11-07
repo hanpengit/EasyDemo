@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.hunder.easylib.R;
+import com.hunder.easylib.dialog.CustomBottomDialog;
 import com.hunder.easylib.dialog.CustomMultiItemDialog;
 import com.hunder.easylib.dialog.CustomNormalDialog;
 
@@ -235,7 +236,7 @@ public class DialogUtils {
      * BottomDialog
      */
     public static Dialog showBottomDialog(Context context) {
-        final Dialog dialog = new Dialog(context, R.style.Dialog);
+        final Dialog dialog = new Dialog(context, R.style.BottomDialog);
 
         LayoutInflater from = LayoutInflater.from(context);
         View view = from.inflate(R.layout.dialog_bottom, null);
@@ -269,6 +270,16 @@ public class DialogUtils {
 
         dialog.show();
         return dialog;
+    }
+
+    /**
+     * BottomDialog 2
+     * 该方法和showBottomDialog()效果一样,只是在该方法中将代码封装到自定义Dialog中了
+     */
+    public static Dialog showBottomDialog2(Context context) {
+        CustomBottomDialog bottomDialog = new CustomBottomDialog(context);
+        bottomDialog.show();
+        return bottomDialog;
     }
 
 }

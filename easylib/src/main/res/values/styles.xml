@@ -6,9 +6,24 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 是否背景模糊 -->
+        <item name="android:backgroundDimAmount">0.5</item> <!-- 设置背景模糊的透明度-->
+    </style>
+
+    <style name="BottomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowAnimationStyle">@style/animate_dialog</item>
+    </style>
+
+    <style name="animate_dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
     </style>
 
     <style name="LoadingDialog" parent="android:style/Theme.Dialog">

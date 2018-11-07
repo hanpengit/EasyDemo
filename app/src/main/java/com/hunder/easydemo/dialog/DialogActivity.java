@@ -37,7 +37,8 @@ public class DialogActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.dialog1, R.id.dialog2, R.id.dialog2_1, R.id.dialog3, R.id.dialog4, R.id.dialog4_1, R.id.dialog5, R.id.dialog6, R.id.dialog7, R.id.dialog8})
+    @OnClick({R.id.dialog1, R.id.dialog2, R.id.dialog2_1, R.id.dialog3, R.id.dialog4, R.id.dialog4_1, R.id.dialog5,
+            R.id.dialog6, R.id.dialog7, R.id.dialog8, R.id.dialog9})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.dialog1:
@@ -133,6 +134,10 @@ public class DialogActivity extends BaseActivity {
 
             case R.id.dialog8:
                 DialogUtils.showBottomDialog(this);
+                break;
+
+            case R.id.dialog9:
+                DialogUtils.showBottomDialog2(this);
                 break;
 
         }

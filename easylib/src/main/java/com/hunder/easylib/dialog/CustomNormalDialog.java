@@ -29,9 +29,10 @@ public class CustomNormalDialog extends Dialog {
 
     public CustomNormalDialog(Context context) {
         super(context, R.style.Dialog);
+
+        //也可以将下边的代码放到onCreate()方法中
         View view = View.inflate(context, R.layout.dialog_normal, null);
         ButterKnife.bind(this, view);
-
         setCancelable(true);
         setCanceledOnTouchOutside(true);
         setContentView(view);

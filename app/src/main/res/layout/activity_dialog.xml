@@ -55,5 +55,10 @@
         style="@style/text_style"
         android:text="BottomDialog" />
 
+    <TextView
+        android:id="@+id/dialog9"
+        style="@style/text_style"
+        android:text="BottomDialog2" />
+
 
 </LinearLayout>
