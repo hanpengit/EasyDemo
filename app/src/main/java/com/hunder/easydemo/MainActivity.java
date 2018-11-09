@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.hunder.easydemo.base.BaseActivity;
 import com.hunder.easydemo.dialog.DialogActivity;
+import com.hunder.easydemo.view.ViewActivity;
 import com.hunder.easylib.utils.ToastUtils;
 
 import butterknife.OnClick;
@@ -22,14 +23,19 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.tv, R.id.dialog})
+    @OnClick({R.id.tv, R.id.dialog, R.id.view})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv:
                 ToastUtils.showMessage("Easy Demo");
                 break;
+
             case R.id.dialog:
                 DialogActivity.startActivity(this);
+                break;
+
+            case R.id.view:
+                ViewActivity.startActivity(this);
                 break;
         }
     }

@@ -15,4 +15,9 @@
         style="@style/text_style"
         android:text="Dialog" />
 
+    <TextView
+        android:id="@+id/view"
+        style="@style/text_style"
+        android:text="View" />
+
 </LinearLayout>
