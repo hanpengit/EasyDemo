@@ -20,6 +20,7 @@
         <activity android:name=".dialog.DialogActivity" />
         <activity android:name=".view.ViewActivity" />
         <activity android:name=".view.DragViewActivity" />
+        <activity android:name=".view.PieViewActivity" />
     </application>
 
 </manifest>

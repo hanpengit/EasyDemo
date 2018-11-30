@@ -37,7 +37,7 @@ public class ViewActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.view, R.id.view1})
+    @OnClick({R.id.view, R.id.viewx, R.id.view1})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.view:
@@ -45,6 +45,9 @@ public class ViewActivity extends BaseActivity {
                 break;
 
             case R.id.view1:
+                PieViewActivity.startActivity(this);
+
+            case R.id.viewx:
 
                 break;
         }
