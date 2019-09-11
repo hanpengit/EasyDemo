@@ -6,4 +6,6 @@
 
     <color name="primary_translucent">#802a85e8</color>
     <color name="primary_translucent_dark">#b32a85e8</color>
+    <color name="bg">#f6f6f6</color>
+    <color name="divider_line">#e8e8e8</color>
 </resources>

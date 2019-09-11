@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.tv, R.id.dialog, R.id.view})
+    @OnClick({R.id.tv, R.id.dialog, R.id.view, R.id.network_speed, R.id.emoji})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv:
@@ -36,6 +36,14 @@ public class MainActivity extends BaseActivity {
 
             case R.id.view:
                 ViewActivity.startActivity(this);
+                break;
+
+            case R.id.network_speed:
+                NetWorkSpeedTestActivity.startActivity(this);
+                break;
+
+            case R.id.emoji:
+                EmojiTestActivity.startActivity(this);
                 break;
         }
     }

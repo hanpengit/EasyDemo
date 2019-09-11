@@ -181,7 +181,7 @@ public class DialogUtils {
     public static Dialog showLoadingDialog(Context context, String msg) {
         LayoutInflater from = LayoutInflater.from(context);
         View view = from.inflate(R.layout.dialog_loading, null);
-        TextView msgView = view.findViewById(R.id.loading_msg);
+        TextView msgView = (TextView) view.findViewById(R.id.loading_msg);
         msgView.setText(msg);
 
         Dialog dialog = new Dialog(context, R.style.LoadingDialog);
@@ -200,7 +200,7 @@ public class DialogUtils {
     public static Dialog showLoadingDialog2(Context context, String msg) {
         LayoutInflater from = LayoutInflater.from(context);
         View view = from.inflate(R.layout.dialog_loading2, null);
-        TextView msgView = view.findViewById(R.id.loading_msg);
+        TextView msgView = (TextView) view.findViewById(R.id.loading_msg);
         msgView.setText(msg);
 
         Dialog dialog = new Dialog(context, R.style.LoadingDialog);
@@ -219,7 +219,7 @@ public class DialogUtils {
     public static Dialog showLoadingDialog3(Context context) {
         LayoutInflater from = LayoutInflater.from(context);
         View view = from.inflate(R.layout.dialog_loading2, null);
-        TextView msgView = view.findViewById(R.id.loading_msg);
+        TextView msgView = (TextView) view.findViewById(R.id.loading_msg);
         msgView.setVisibility(View.GONE);
 
         Dialog dialog = new Dialog(context, R.style.LoadingDialog);

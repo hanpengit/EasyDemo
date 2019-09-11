@@ -21,6 +21,8 @@
         <activity android:name=".view.ViewActivity" />
         <activity android:name=".view.DragViewActivity" />
         <activity android:name=".view.PieViewActivity" />
+        <activity android:name=".NetWorkSpeedTestActivity" />
+        <activity android:name=".EmojiTestActivity" />
     </application>
 
 </manifest>

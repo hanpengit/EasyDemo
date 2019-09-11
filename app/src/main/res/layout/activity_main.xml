@@ -20,4 +20,14 @@
         style="@style/text_style"
         android:text="View" />
 
+    <TextView
+        android:id="@+id/network_speed"
+        style="@style/text_style"
+        android:text="NetworkSpeed" />
+
+    <TextView
+        android:id="@+id/emoji"
+        style="@style/text_style"
+        android:text="emoji test" />
+
 </LinearLayout>
