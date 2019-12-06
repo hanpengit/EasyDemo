@@ -21,7 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getLayoutId());
         ButterKnife.bind(this);
         ActivityUtils.addActivity(this);
-        LogUtils.d("Activity:" + this.getLocalClassName());
+        LogUtils.d("activity: " + this.getLocalClassName());
     }
 
     @Override

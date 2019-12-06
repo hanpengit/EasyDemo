@@ -1,4 +1,4 @@
-package com.hunder.easydemo;
+package com.hunder.easydemo.network;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,10 +7,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.TextView;
 
+import com.hunder.easydemo.R;
 import com.hunder.easydemo.base.BaseActivity;
 import com.hunder.easylib.utils.LogUtils;
 import com.hunder.easylib.utils.NetWorkSpeedUtils;
-import com.hunder.easylib.utils.ToastUtils;
 
 import butterknife.BindView;
 

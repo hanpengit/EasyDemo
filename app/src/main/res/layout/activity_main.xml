@@ -30,4 +30,9 @@
         style="@style/text_style"
         android:text="emoji test" />
 
+    <TextView
+        android:id="@+id/network_listening"
+        style="@style/text_style"
+        android:text="Network Listening" />
+
 </LinearLayout>

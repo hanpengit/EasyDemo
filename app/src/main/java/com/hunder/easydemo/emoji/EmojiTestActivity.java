@@ -1,4 +1,4 @@
-package com.hunder.easydemo;
+package com.hunder.easydemo.emoji;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.hunder.easydemo.R;
 import com.hunder.easydemo.base.BaseActivity;
 import com.hunder.easylib.utils.LogUtils;
 

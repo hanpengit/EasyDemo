@@ -3,6 +3,7 @@ package com.hunder.easydemo;
 import android.app.Application;
 import android.content.Context;
 
+import com.hunder.easylib.network_listening.NetworkManager;
 import com.hunder.easylib.utils.CommonUtils;
 
 /**
@@ -11,16 +12,17 @@ import com.hunder.easylib.utils.CommonUtils;
 
 public class MyApplication extends Application {
 
-    private static Context mContext;
+    private static Context context;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        CommonUtils.context = mContext = getApplicationContext();
+        CommonUtils.context = context = getApplicationContext();
+        NetworkManager.getDefault().init1(this);
     }
 
     public Context getContext() {
-        return mContext;
+        return context;
     }
 
 }
