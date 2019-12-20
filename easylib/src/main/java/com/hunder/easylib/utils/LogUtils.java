@@ -80,10 +80,16 @@ public class LogUtils {
      * 获取调用者的类名
      */
     public static String getCallerName() {
-        StackTraceElement caller = Thread.currentThread().getStackTrace()[4];
-        String className = caller.getClassName();// 带有包名信息
-        className = className.substring(className.lastIndexOf(".") + 1);
-        return className;
+        String className = "";
+        try {
+            StackTraceElement caller = Thread.currentThread().getStackTrace()[4];
+            String classFullname = caller.getClassName(); // 带有包名信息
+            className = classFullname.substring(classFullname.lastIndexOf(".") + 1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return className + " >>> ";
     }
 
 }

@@ -18,7 +18,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         CommonUtils.context = context = getApplicationContext();
-        NetworkManager.getDefault().init1(this);
+        NetworkManager.getDefault().init(this);
     }
 
     public Context getContext() {
