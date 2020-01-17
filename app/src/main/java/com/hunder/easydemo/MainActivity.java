@@ -6,9 +6,12 @@ import android.view.View;
 import com.hunder.easydemo.base.BaseActivity;
 import com.hunder.easydemo.dialog.DialogActivity;
 import com.hunder.easydemo.emoji.EmojiTestActivity;
+import com.hunder.easydemo.mvp.presenter.MainPresenter;
 import com.hunder.easydemo.network.NetWorkSpeedTestActivity;
 import com.hunder.easydemo.network.NetworkListeningActivity;
+import com.hunder.easydemo.mvp.contract.MainContract;
 import com.hunder.easydemo.view.ViewActivity;
+import com.hunder.easylib.entity.Home;
 import com.hunder.easylib.network_listening.NetworkManager;
 import com.hunder.easylib.network_listening.annotation.Network;
 import com.hunder.easylib.network_listening.type.NetType;
@@ -17,7 +20,9 @@ import com.hunder.easylib.utils.ToastUtils;
 
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainContract.View {
+
+    private MainPresenter mPresenter;
 
     @Override
     protected int getLayoutId() {
@@ -29,6 +34,9 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         NetworkManager.getDefault().registerObserver(this);
+
+        mPresenter = new MainPresenter(this);
+        mPresenter.loadData();
     }
 
     @OnClick({R.id.tv, R.id.dialog, R.id.view, R.id.network_speed, R.id.emoji, R.id.network_listening})
@@ -69,6 +77,23 @@ public class MainActivity extends BaseActivity {
     protected void onDestroy() {
         super.onDestroy();
         NetworkManager.getDefault().unRegisterObserver(this);
+        mPresenter.detachView();
+    }
+
+
+    @Override
+    public void showData(Home home) {
+        LogUtils.d("showData:" + home.boutiqueList.get(0).name);
+    }
+
+    @Override
+    public void showLoading(boolean show) {
+
+    }
+
+    @Override
+    public void showError(String errorMsg) {
+        LogUtils.d("showError:" + errorMsg);
     }
 
 }
