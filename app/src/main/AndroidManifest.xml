@@ -24,6 +24,7 @@
         <activity android:name=".network.NetWorkSpeedTestActivity" />
         <activity android:name=".emoji.EmojiTestActivity" />
         <activity android:name=".network.NetworkListeningActivity" />
+        <activity android:name=".CommonWebActivity" />
     </application>
 
 </manifest>

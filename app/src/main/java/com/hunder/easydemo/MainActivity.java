@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         mPresenter.loadData();
     }
 
-    @OnClick({R.id.tv, R.id.dialog, R.id.view, R.id.network_speed, R.id.emoji, R.id.network_listening})
+    @OnClick({R.id.tv, R.id.dialog, R.id.view, R.id.network_speed, R.id.emoji, R.id.network_listening, R.id.kefu})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv:
@@ -64,6 +64,10 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
             case R.id.network_listening:
                 NetworkListeningActivity.startActivity(this);
+                break;
+
+            case R.id.kefu:
+                CommonWebActivity.startActivity(this, "http://mad.miduoke.net/Web/im.aspx?_=t&accountid=115168");
                 break;
         }
     }

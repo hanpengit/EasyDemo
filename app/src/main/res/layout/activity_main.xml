@@ -35,4 +35,9 @@
         style="@style/text_style"
         android:text="Network Listening" />
 
+    <TextView
+        android:id="@+id/kefu"
+        style="@style/text_style"
+        android:text="kefu" />
+
 </LinearLayout>
