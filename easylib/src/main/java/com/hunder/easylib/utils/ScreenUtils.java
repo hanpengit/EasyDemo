@@ -2,6 +2,8 @@ package com.hunder.easylib.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Point;
+import android.os.Build;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -50,25 +52,39 @@ public class ScreenUtils {
     }
 
     /**
-     * 屏幕宽
+     * Return the width of screen, in pixel.
      *
      * @param context
      * @return
      */
     public static int getScreenWidth(Context context) {
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        return wm.getDefaultDisplay().getWidth();
+        if (wm == null) return -1;
+        Point point = new Point();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            wm.getDefaultDisplay().getRealSize(point);
+        } else {
+            wm.getDefaultDisplay().getSize(point);
+        }
+        return point.x;
     }
 
     /**
-     * 屏幕高
+     * Return the height of screen, in pixel.
      *
      * @param context
      * @return
      */
     public static int getScreenHeight(Context context) {
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        return wm.getDefaultDisplay().getHeight();
+        if (wm == null) return -1;
+        Point point = new Point();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            wm.getDefaultDisplay().getRealSize(point);
+        } else {
+            wm.getDefaultDisplay().getSize(point);
+        }
+        return point.y;
     }
 
 }

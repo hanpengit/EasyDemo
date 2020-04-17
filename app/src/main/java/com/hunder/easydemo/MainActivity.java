@@ -10,6 +10,7 @@ import com.hunder.easydemo.mvp.presenter.MainPresenter;
 import com.hunder.easydemo.network.NetWorkSpeedTestActivity;
 import com.hunder.easydemo.network.NetworkListeningActivity;
 import com.hunder.easydemo.mvp.contract.MainContract;
+import com.hunder.easydemo.play.SurfaceActivity;
 import com.hunder.easydemo.view.ViewActivity;
 import com.hunder.easylib.entity.Home;
 import com.hunder.easylib.network_listening.NetworkManager;
@@ -39,7 +40,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         mPresenter.loadData();
     }
 
-    @OnClick({R.id.tv, R.id.dialog, R.id.view, R.id.network_speed, R.id.emoji, R.id.network_listening, R.id.kefu})
+    @OnClick({R.id.tv, R.id.dialog, R.id.view, R.id.network_speed, R.id.emoji, R.id.network_listening, R.id.kefu, R.id.play})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv:
@@ -68,6 +69,10 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
             case R.id.kefu:
                 CommonWebActivity.startActivity(this, "http://mad.miduoke.net/Web/im.aspx?_=t&accountid=115168");
+                break;
+
+            case R.id.play:
+                SurfaceActivity.startActivity(this);
                 break;
         }
     }

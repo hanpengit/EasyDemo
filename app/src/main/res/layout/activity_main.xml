@@ -40,4 +40,9 @@
         style="@style/text_style"
         android:text="kefu" />
 
+    <TextView
+        android:id="@+id/play"
+        style="@style/text_style"
+        android:text="play" />
+
 </LinearLayout>
