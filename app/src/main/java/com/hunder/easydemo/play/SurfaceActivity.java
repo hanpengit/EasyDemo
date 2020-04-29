@@ -147,48 +147,6 @@ public class SurfaceActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //initPlayer();
-        //initSurfaceView();
-
-        //getProgress();
-        //mMediaPlayer.prepareAsync();
-
-        /*mMediaPlayer = new MediaPlayer();
-        try {
-            //mMediaPlayer.setDataSource(this, Uri.parse("https://haokan.baidu.com/v?vid=8103185499800508930&tab=yinyue"));
-            mMediaPlayer.setDataSource("http://vfx.mtime.cn/Video/2018/07/06/mp4/180706094003288023.mp4"); ///和上边的方式的区别？
-            //mMediaPlayer.setDataSource("https://vdept.bdstatic.com/4b75616d7432796a61427146367a3759/7955717966504233/67a0665d040704e74b92413d979462ce76765fe5af135f2712f37a968a6f3e78ca8da8bd06569712034e164c66a86e871643dcbe7236a3d6dd8b251bb38b7f32.mp4?auth_key=1585134362-0-0-d2109ba3c01a2b8271846851286baf42");
-            mHolder = mSurfaceView.getHolder();
-            mHolder.addCallback(new SurfaceHolder.Callback() {
-                @Override
-                public void surfaceCreated(SurfaceHolder surfaceHolder) {
-                    mMediaPlayer.setDisplay(surfaceHolder);
-                }
-
-                @Override
-                public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
-
-                }
-
-                @Override
-                public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
-
-                }
-            });
-
-            mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mMediaPlayer.start();
-                    //mMediaPlayer.setLooping(true);
-                }
-            });
-
-            mMediaPlayer.prepareAsync();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             private int mLastProgress;
@@ -453,23 +411,8 @@ public class SurfaceActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.btn_start, R.id.btn_pause, R.id.btn_stop})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_start:
-                start();
-                break;
-            case R.id.btn_pause:
-                pause();
-                break;
-            case R.id.btn_stop:
-                stop();
-                break;
-        }
-    }
-
     @OnClick({R.id.iv_play, R.id.tv_play_speed, R.id.tv_play_quality, R.id.iv_fullScreen, R.id.iv_back})
-    public void onClick1(View view) {
+    public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_play:
                 if (isPlaying()) {

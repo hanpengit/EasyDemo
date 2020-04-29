@@ -11,6 +11,7 @@ import com.hunder.easydemo.network.NetWorkSpeedTestActivity;
 import com.hunder.easydemo.network.NetworkListeningActivity;
 import com.hunder.easydemo.mvp.contract.MainContract;
 import com.hunder.easydemo.play.SurfaceActivity;
+import com.hunder.easydemo.play.SurfaceActivity2;
 import com.hunder.easydemo.view.ViewActivity;
 import com.hunder.easylib.entity.Home;
 import com.hunder.easylib.network_listening.NetworkManager;
@@ -72,7 +73,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
                 break;
 
             case R.id.play:
-                SurfaceActivity.startActivity(this);
+                SurfaceActivity2.startActivity(this);
                 break;
         }
     }

@@ -13,8 +13,10 @@
             android:layout_width="match_parent"
             android:layout_height="210dp" />
 
+        <!-- 手势滑动 -->
         <include layout="@layout/media_controller_slide" />
 
+        <!-- 播放器底部控制栏 -->
         <LinearLayout
             android:id="@+id/ll_play_control"
             android:layout_width="match_parent"
@@ -102,6 +104,7 @@
                 android:src="@mipmap/icon_fullscreen" />
         </LinearLayout>
 
+        <!-- 顶部标题栏 -->
         <LinearLayout
             android:id="@+id/ll_title_linear"
             android:layout_width="match_parent"
@@ -125,68 +128,10 @@
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
                 android:singleLine="true"
+                android:text="2021考研英语"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>
-
     </FrameLayout>
-
-
-    <SeekBar
-        android:id="@+id/seekbar1"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_margin="10dp"
-        android:progressDrawable="@drawable/bg_seekbar_progress_drawable"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/tv_time1"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:background="@color/divider_line"
-        android:gravity="center"
-        android:text="00:00 / 00:00"
-        android:textSize="20sp"
-        android:visibility="gone" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <Button
-            android:id="@+id/btn_start"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:background="@color/divider_line"
-            android:gravity="center"
-            android:text="开始"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btn_pause"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:background="@color/divider_line"
-            android:gravity="center"
-            android:text="暂停"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btn_stop"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:background="@color/divider_line"
-            android:gravity="center"
-            android:text="停止"
-            android:textSize="20sp" />
-    </LinearLayout>
 
 </LinearLayout>
