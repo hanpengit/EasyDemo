@@ -4,26 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.Nullable;
-import android.view.MotionEvent;
 import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.SeekBar;
-import android.widget.TextView;
 
 import com.hunder.easydemo.R;
 import com.hunder.easydemo.base.BaseActivity;
 import com.hunder.easylib.player.CustomVideoView;
 import com.hunder.easylib.player.MediaPlayerListener;
-import com.hunder.easylib.player.PlayUtils;
 import com.hunder.easylib.player.PlayerState;
-import com.hunder.easylib.utils.FormatUtils;
-import com.hunder.easylib.utils.LogUtils;
 import com.hunder.easylib.utils.ToastUtils;
 
 import java.io.IOException;
@@ -35,7 +24,7 @@ import butterknife.OnClick;
  * Created by hp on 2020/3/23.
  */
 
-public class SurfaceActivity2 extends BaseActivity implements MediaPlayerListener{
+public class SurfaceActivity2 extends BaseActivity implements MediaPlayerListener {
 
     @BindView(R.id.custom_video_view)
     CustomVideoView mVideoView;
@@ -189,7 +178,7 @@ public class SurfaceActivity2 extends BaseActivity implements MediaPlayerListene
     }
 
 
-    //---------------------------------------------------
+    //------------------------- MediaPlayerListener -----------------------------
 
     @Override
     public int getCurrentPosition() {

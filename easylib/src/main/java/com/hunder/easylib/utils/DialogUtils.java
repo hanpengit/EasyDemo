@@ -83,8 +83,17 @@ public class DialogUtils {
 
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
-        //ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         dialog.setContentView(view);
+
+        // 设置dialog位置和宽高
+        Window dialogWindow = dialog.getWindow();
+        WindowManager.LayoutParams p = dialogWindow.getAttributes();
+        p.gravity = Gravity.CENTER;
+        //设置高度和宽度
+        //p.height = (int) (ScreenUtils.getScreenHeight(context) * 0.7); // 高度设置为屏幕的0.7
+        p.width = (int) (ScreenUtils.getScreenWidth(context) * 0.9); // 宽度设置为屏幕的0.7
+        dialogWindow.setAttributes(p);
+
         dialog.show();
 
         return dialog;
