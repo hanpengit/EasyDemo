@@ -27,6 +27,7 @@
         <activity android:name=".CommonWebActivity" />
         <activity android:name=".play.SurfaceActivity" />
         <activity android:name=".play.SurfaceActivity2" />
+        <activity android:name=".view.VolumeViewActivity" />
     </application>
 
 </manifest>

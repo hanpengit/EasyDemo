@@ -6,7 +6,10 @@ import android.net.NetworkCapabilities;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
+import com.hunder.easylib.network_listening.NetworkManager;
+import com.hunder.easylib.network_listening.type.NetType;
 import com.hunder.easylib.utils.LogUtils;
+import com.hunder.easylib.utils.NetworkUtils;
 
 /**
  * 实现网络监听除广播外的另一种方式
@@ -20,6 +23,8 @@ public class NetworkCallbackImpl extends ConnectivityManager.NetworkCallback {
     public void onAvailable(Network network) {
         super.onAvailable(network);
         LogUtils.d("NetworkCallback: onAvailable");
+        NetType netType = NetworkUtils.getNetType(NetworkManager.getDefault().getApplication());
+        LogUtils.d("netType: " + netType.ordinal());
     }
 
     @Override

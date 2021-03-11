@@ -1,17 +1,13 @@
 package com.hunder.easydemo.view;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.hunder.easydemo.R;
 import com.hunder.easydemo.base.BaseActivity;
-import com.hunder.easylib.dialog.CustomMultiItemDialog;
-import com.hunder.easylib.dialog.CustomNormalDialog;
-import com.hunder.easylib.utils.DialogUtils;
-import com.hunder.easylib.utils.ToastUtils;
+import com.hunder.easylib.utils.IntentUtils;
 
 import butterknife.OnClick;
 
@@ -37,7 +33,7 @@ public class ViewActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.view, R.id.viewx, R.id.view1})
+    @OnClick({R.id.view, R.id.viewx, R.id.view1, R.id.view2})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.view:
@@ -46,6 +42,11 @@ public class ViewActivity extends BaseActivity {
 
             case R.id.view1:
                 PieViewActivity.startActivity(this);
+                break;
+
+            case R.id.view2:
+                IntentUtils.startActivity(this, VolumeViewActivity.class);
+                break;
 
             case R.id.viewx:
 

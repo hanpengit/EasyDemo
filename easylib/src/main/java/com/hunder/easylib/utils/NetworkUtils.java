@@ -20,9 +20,6 @@ import java.util.Enumeration;
  */
 public class NetworkUtils {
 
-    private static NetworkInfo info;
-
-
     public static final int NETWORK_WIFI_CONNECTION = 1;
     public static final int NETWORK_MOBILE_CONNECTION = 2;
     public static final int NETWORK_DISCONNECTION = 0;
@@ -31,7 +28,7 @@ public class NetworkUtils {
 
     public static boolean isNetConnected(Context context) {
         ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        info = connMgr.getActiveNetworkInfo();
+        NetworkInfo info = connMgr.getActiveNetworkInfo();
         if (info != null && info.isConnected()) {
             return true;
         }

@@ -16,6 +16,11 @@
         android:text="PieView" />
 
     <TextView
+        android:id="@+id/view2"
+        style="@style/text_style"
+        android:text="VolumeView" />
+
+    <TextView
         android:id="@+id/viewx"
         style="@style/text_style"
         android:text="..." />
