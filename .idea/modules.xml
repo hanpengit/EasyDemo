@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-EasyDemo.iml" filepath="$PROJECT_DIR$/01-EasyDemo.iml" group="EasyDemo" />
       <module fileurl="file://$PROJECT_DIR$/EasyDemo.iml" filepath="$PROJECT_DIR$/EasyDemo.iml" group="EasyDemo" />
+      <module fileurl="file://$PROJECT_DIR$/app/EasyDemo-app.iml" filepath="$PROJECT_DIR$/app/EasyDemo-app.iml" group="EasyDemo/app" />
+      <module fileurl="file://$PROJECT_DIR$/easylib/EasyDemo-easylib.iml" filepath="$PROJECT_DIR$/easylib/EasyDemo-easylib.iml" group="EasyDemo/easylib" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="EasyDemo/app" />
       <module fileurl="file://$PROJECT_DIR$/easylib/easylib.iml" filepath="$PROJECT_DIR$/easylib/easylib.iml" group="EasyDemo/easylib" />
     </modules>

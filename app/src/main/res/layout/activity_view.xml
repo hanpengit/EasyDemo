@@ -20,6 +20,12 @@
         style="@style/text_style"
         android:text="VolumeView" />
 
+    <!-- 自定义view：跟随手指移动 -->
+    <TextView
+        android:id="@+id/view3"
+        style="@style/text_style"
+        android:text="CustomView1" />
+
     <TextView
         android:id="@+id/viewx"
         style="@style/text_style"

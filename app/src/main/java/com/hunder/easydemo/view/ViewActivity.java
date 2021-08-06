@@ -33,7 +33,7 @@ public class ViewActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.view, R.id.viewx, R.id.view1, R.id.view2})
+    @OnClick({R.id.view, R.id.viewx, R.id.view1, R.id.view2, R.id.view3})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.view:
@@ -46,6 +46,10 @@ public class ViewActivity extends BaseActivity {
 
             case R.id.view2:
                 IntentUtils.startActivity(this, VolumeViewActivity.class);
+                break;
+
+            case R.id.view3:
+                CustomView1Activity.startActivity(this);
                 break;
 
             case R.id.viewx:
