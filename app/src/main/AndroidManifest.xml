@@ -29,6 +29,7 @@
         <activity android:name=".play.SurfaceActivity2" />
         <activity android:name=".view.VolumeViewActivity" />
         <activity android:name=".view.CustomView1Activity" />
+        <activity android:name=".view.SmoothScrollViewActivity" />
     </application>
 
 </manifest>

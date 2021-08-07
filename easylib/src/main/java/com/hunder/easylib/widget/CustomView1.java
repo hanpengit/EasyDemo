@@ -10,6 +10,7 @@ import com.hunder.easylib.utils.LogUtils;
 
 /**
  * 自定义view：跟随手指移动
+ * 其它实现方式：参考 DragViewUtil
  */
 public class CustomView1 extends View {
 

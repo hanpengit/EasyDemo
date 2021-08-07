@@ -1,7 +1,5 @@
 package com.hunder.easydemo.view;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -10,12 +8,10 @@ import com.hunder.easydemo.R;
 import com.hunder.easydemo.base.BaseActivity;
 import com.hunder.easylib.utils.ToastUtils;
 
+/**
+ * 测试自定义view(跟随手指移动)
+ */
 public class CustomView1Activity extends BaseActivity {
-
-    public static void startActivity(Context context) {
-        Intent intent = new Intent(context, CustomView1Activity.class);
-        context.startActivity(intent);
-    }
 
     @Override
     protected int getLayoutId() {
@@ -35,4 +31,5 @@ public class CustomView1Activity extends BaseActivity {
             }
         });
     }
+
 }

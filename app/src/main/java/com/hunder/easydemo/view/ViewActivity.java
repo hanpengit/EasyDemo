@@ -33,7 +33,7 @@ public class ViewActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.view, R.id.viewx, R.id.view1, R.id.view2, R.id.view3})
+    @OnClick({R.id.view, R.id.viewx, R.id.view1, R.id.view2, R.id.view3, R.id.view4})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.view:
@@ -49,7 +49,11 @@ public class ViewActivity extends BaseActivity {
                 break;
 
             case R.id.view3:
-                CustomView1Activity.startActivity(this);
+                IntentUtils.startActivity(this, CustomView1Activity.class);
+                break;
+
+            case R.id.view4:
+                IntentUtils.startActivity(this, SmoothScrollViewActivity.class);
                 break;
 
             case R.id.viewx:
