@@ -30,6 +30,7 @@
         <activity android:name=".view.VolumeViewActivity" />
         <activity android:name=".view.CustomView1Activity" />
         <activity android:name=".view.SmoothScrollViewActivity" />
+        <activity android:name=".view.SmoothScrollViewActivity1" />
     </application>
 
 </manifest>

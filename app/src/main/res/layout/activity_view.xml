@@ -32,6 +32,12 @@
         style="@style/text_style"
         android:text="SmoothScrollView" />
 
+    <!-- 动画实现弹性滑动 -->
+    <TextView
+        android:id="@+id/view5"
+        style="@style/text_style"
+        android:text="SmoothScrollView1" />
+
     <TextView
         android:id="@+id/viewx"
         style="@style/text_style"
